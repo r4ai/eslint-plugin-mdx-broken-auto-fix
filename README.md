@@ -5,20 +5,20 @@ Steps to reproduce and verify the broken auto-fix:
 1. Install dependencies
 
    ```bash
-   bun install --frozen-lockfile
+   npm install
    ```
 
 2. Run ESLint and confirm that there is no error:
 
    ```sh
-   $ bun run remark src
+   $ npx remark src
    src/broken.md: no issues found
    ```
 
 3. Confirm that even though there are no issues, the content is changed by the auto-fix
 
    ```sh
-   $ bun run remark src --output
+   $ npx remark src --output
    src/broken.md: written
 
    $ git --no-pager diff
